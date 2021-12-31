@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    
+    <title>Document</title>
+</head>
+<body>
+    <header class="jumbotron">
+        <h1 class="display-3">Weather Dashboard</h1>
+    </header>
+  
+    <div id="search">
+        <h2>Search for a City:</h2>
+        <textarea>San Diego</textarea>
+        <button id="searchBtn">Search</button>
+        <break></break>
+        <div id="cities"></div>
+    </div>
+
+    <div>
+        <container id="currentWeather">
+            <h3 id="nameDate"></h3>
+            <p>Temp: <span id ="temp"></span></p>
+            <p>Wind: <span id ="wind"></span></p>
+            <p>Humidity: <span id ="humidity"></span></p>
+            <p>UV Index: <span id ="uv"></span></p>
+        </container>
+
+        <container id="futureWeather">
+            <h4>5-Day Forecast:</h4>
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+            
+        </container>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
