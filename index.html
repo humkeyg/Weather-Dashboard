@@ -6,70 +6,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&family=Raleway:wght@100&family=Spartan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+
+    <title>Weather Dashboard</title>
 </head>
+
 <body>
     <header class="jumbotron">
         <h1 class="display-3">Weather Dashboard</h1>
     </header>
-  
-    <div id="search">
-        <h2>Search for a City:</h2>
-        <textarea>San Diego</textarea>
-        <button id="searchBtn">Search</button>
-        <break></break>
-        <div id="cities"></div>
-    </div>
+    
+    <div class="float-container">
+      <div class="float-child" id="search">
+          <h2>Search for a City:</h2>
+          <form id="searchForm">
+            <input id="searchInput" type="text"/>
+            <button class="btn btn-primary" id="searchBtn">Search</button>
+          </form>
+          <break></break>
+          <div id="cities"></div>
+      </div>
 
-    <div>
-        <container id="currentWeather">
-            <h3 id="nameDate"></h3>
-            <p>Temp: <span id ="temp"></span></p>
-            <p>Wind: <span id ="wind"></span></p>
-            <p>Humidity: <span id ="humidity"></span></p>
-            <p>UV Index: <span id ="uv"></span></p>
-        </container>
-
-        <container id="futureWeather">
-            <h4>5-Day Forecast:</h4>
+      <div class="float-child">
+          <container id="currentWeather">
             <div class="row">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body">
-                        </div>
-                    </div>
-                </div>
+              <div class="col">
+                <h3 id="cityTitle"><span id="currentDate"></span></h3>
+                <p>Temp: <span id ="temp"></span>°F</p>
+                <p>Wind: <span id ="wind"></span>mph</p>
+                <p>Humidity: <span id ="humidity">%</span></p>
+                <p>UV Index: <span id ="uv"></span></p>
+              </div>
             </div>
-        
+          </container>
 
-            
-        </container>
+          <container id="futureWeather">
+              <h4>5-Day Forecast:</h4>
+              <div class="row">
+                  <div class="col">
+                      <div class="card">
+                          <div class="card-body">
+                            <span id="date-1"></span>
+                            <img id="icon-1" src=""></img>
+                            <p>Temp: <span id ="temp-1"></span>°F</p>
+                            <p>Wind: <span id ="wind-1"></span>mph</p>
+                            <p>Humidity: <span id ="humidity-1">%</span></p>              
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="card">
+                          <div class="card-body">
+                            <span id="date-2"></span>
+                            <img id="icon-2" src=""></img>
+                            <p>Temp: <span id ="temp-2"></span>°F</p>
+                            <p>Wind: <span id ="wind-2"></span>mph</p>
+                            <p>Humidity: <span id ="humidity-2">%</span></p>              
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="card">
+                          <div class="card-body">
+                            <span id="date-3"></span>
+                            <img id="icon-3" src=""></img>
+                            <p>Temp: <span id ="temp-3"></span>°F</p>
+                            <p>Wind: <span id ="wind-3"></span>mph</p>
+                            <p>Humidity: <span id ="humidity-3">%</span></p>              
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="card">
+                          <div class="card-body">
+                            <span id="date-4"></span>
+                            <img id="icon-4" src=""></img>
+                            <p>Temp: <span id ="temp-4"></span>°F</p>
+                            <p>Wind: <span id ="wind-4"></span>mph</p>
+                            <p>Humidity: <span id ="humidity-4">%</span></p>              
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col">
+                      <div class="card">
+                          <div class="card-body">
+                            <span id="date-5"></span>
+                            <img id="icon-5" src=""></img>
+                            <p>Temp: <span id ="temp-5"></span>°F</p>
+                            <p>Wind: <span id ="wind-5"></span>mph</p>
+                            <p>Humidity: <span id ="humidity-5">%</span></p>              
+                          </div>
+                      </div>
+                  </div>
+              </div>  
+          </container>
+      </div>
     </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
