@@ -20,21 +20,21 @@
     </header>
     
     <div class="float-container">
-      <div class="float-child" id="search">
+      <div class="col float-child" id="search">
           <h2>Search for a City:</h2>
           <form id="searchForm">
             <input id="searchInput" type="text"/>
             <button class="btn btn-primary" id="searchBtn">Search</button>
           </form>
           <break></break>
-          <div id="cities"></div>
+          <div class="col float-left" id="cities"></div>
       </div>
 
       <div class="float-child">
           <container id="currentWeather">
             <div class="row">
               <div class="col">
-                <h3 id="cityTitle"><span id="currentDate"></span></h3>
+                <h3 id=""><span id="cityTitle"></span> - <span id="currentDate"></span></h3>
                 <p>Temp: <span id ="temp"></span>°F</p>
                 <p>Wind: <span id ="wind"></span>mph</p>
                 <p>Humidity: <span id ="humidity">%</span></p>

@@ -9,26 +9,31 @@ var currentUvEl=document.getElementById("uv");
 var dateToday=document.getElementById("dateToday");
 
 // For each day of 5-day Forecast //
+var date1=document.getElementById("date-1");
 var icon1=document.getElementById("icon-1");
 var temp1=document.getElementById("temp-1");
 var wind1=document.getElementById("wind-1");
 var humidity1=document.getElementById("humidity-1");
 
+var date2=document.getElementById("date-2");
 var icon2=document.getElementById("icon-2");
 var temp2=document.getElementById("temp-2");
 var wind2=document.getElementById("wind-2");
 var humidity2=document.getElementById("humidity-2");
 
+var date3=document.getElementById("date-3");
 var icon3=document.getElementById("icon-3");
 var temp3=document.getElementById("temp-3");
 var wind3=document.getElementById("wind-3");
 var humidity3=document.getElementById("humidity-3");
 
+var date4=document.getElementById("date-4");
 var icon4=document.getElementById("icon-4");
 var temp4=document.getElementById("temp-4");
 var wind4=document.getElementById("wind-4");
 var humidity4=document.getElementById("humidity-4");
 
+var date5=document.getElementById("date-5");
 var icon5=document.getElementById("icon-5");
 var temp5=document.getElementById("temp-5");
 var wind5=document.getElementById("wind-5");
@@ -58,32 +63,42 @@ function search(lat,lon,cityName) {
           .then(response => response.json())
           .then(data =>{
             console.log(data)
+            const cityHeader=document.getElementById("cityTitle");
+            cityHeader.textContent=cityName; 
+
+            const currentDate=document.getElementById("currentDate");
+            currentDate.textContent = new Date(data.current.dt * 1000);
 
             currentTempEl.textContent=data.current.temp, 
             currentWindEl.textContent=data.current.wind_speed,
             currentHumidityEl.textContent=data.current.humidity;
             currentUvEl.textContent=data.current.uvi;
 
+            date1.textContent = new Date(data.daily[0].dt * 1000);
             icon1.src="http://openweathermap.org/img/wn/"+data.daily[0].weather[0].icon+"@2x.png";
             temp1.textContent=data.daily[0].temp.day;
             wind1.textContent=data.daily[0].wind_speed;
             humidity1.textContent=data.daily[0].humidity;
             
+            date2.textContent = new Date(data.daily[1].dt * 1000);
             icon2.src="http://openweathermap.org/img/wn/"+data.daily[1].weather[0].icon+"@2x.png";
             temp2.textContent=data.daily[1].temp.day;
             wind2.textContent=data.daily[1].wind_speed;
             humidity2.textContent=data.daily[1].humidity;
 
+            date3.textContent = new Date(data.daily[2].dt * 1000);
             icon3.src="http://openweathermap.org/img/wn/"+data.daily[2].weather[0].icon+"@2x.png";
             temp3.textContent=data.daily[2].temp.day;
             wind3.textContent=data.daily[2].wind_speed;
             humidity3.textContent=data.daily[2].humidity;
 
+            date4.textContent = new Date(data.daily[3].dt * 1000);
             icon4.src="http://openweathermap.org/img/wn/"+data.daily[3].weather[0].icon+"@2x.png";
             temp4.textContent=data.daily[3].temp.day;
             wind4.textContent=data.daily[3].wind_speed;
             humidity4.textContent=data.daily[3].humidity;
 
+            date5.textContent = new Date(data.daily[4].dt * 1000);
             icon5.src="http://openweathermap.org/img/wn/"+data.daily[4].weather[0].icon+"@2x.png";
             temp5.textContent=data.daily[4].temp.day;
             wind5.textContent=data.daily[4].wind_speed;
@@ -111,10 +126,8 @@ function displaySearches() {
     const cityName = historyArray[index];
     const button=document.createElement("button");
     
-    // const cityHeader=document.createElement("header");
-    // cityHeader.textContent=cityName;
-    // cityTitle.append(cityHeader);
-
+    const cityHeader=document.getElementById("cityTitle");
+    cityHeader.textContent=cityName;
     button.textContent=cityName;
     historyButtons.append(button);
   }
