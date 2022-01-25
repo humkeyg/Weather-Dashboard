@@ -1,5 +1,7 @@
 # 06 Server-Side API: Weather Dashboard
 
+Link to application: https://humkeyg.github.io/Weather-Dashboard/
+
 ## Description
 
 This app uses dynamic HTML and CSS to render a simple, user-friendly UI. It uses the [OpenWeather One Call API](https://openweathermap.org/api/one-call-api) to retrieve weather data for cities.
