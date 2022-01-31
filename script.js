@@ -75,31 +75,31 @@ function search(lat,lon,cityName) {
             currentUvEl.textContent=data.current.uvi;
 
             date1.textContent = new Date(data.daily[0].dt * 1000);
-            icon1.src="http://openweathermap.org/img/wn/"+data.daily[0].weather[0].icon+"@2x.png";
+            icon1.src="https://openweathermap.org/img/wn/"+data.daily[0].weather[0].icon+"@2x.png";
             temp1.textContent=data.daily[0].temp.day;
             wind1.textContent=data.daily[0].wind_speed;
             humidity1.textContent=data.daily[0].humidity;
             
             date2.textContent = new Date(data.daily[1].dt * 1000);
-            icon2.src="http://openweathermap.org/img/wn/"+data.daily[1].weather[0].icon+"@2x.png";
+            icon2.src="https://openweathermap.org/img/wn/"+data.daily[1].weather[0].icon+"@2x.png";
             temp2.textContent=data.daily[1].temp.day;
             wind2.textContent=data.daily[1].wind_speed;
             humidity2.textContent=data.daily[1].humidity;
 
             date3.textContent = new Date(data.daily[2].dt * 1000);
-            icon3.src="http://openweathermap.org/img/wn/"+data.daily[2].weather[0].icon+"@2x.png";
+            icon3.src="https://openweathermap.org/img/wn/"+data.daily[2].weather[0].icon+"@2x.png";
             temp3.textContent=data.daily[2].temp.day;
             wind3.textContent=data.daily[2].wind_speed;
             humidity3.textContent=data.daily[2].humidity;
 
             date4.textContent = new Date(data.daily[3].dt * 1000);
-            icon4.src="http://openweathermap.org/img/wn/"+data.daily[3].weather[0].icon+"@2x.png";
+            icon4.src="https://openweathermap.org/img/wn/"+data.daily[3].weather[0].icon+"@2x.png";
             temp4.textContent=data.daily[3].temp.day;
             wind4.textContent=data.daily[3].wind_speed;
             humidity4.textContent=data.daily[3].humidity;
 
             date5.textContent = new Date(data.daily[4].dt * 1000);
-            icon5.src="http://openweathermap.org/img/wn/"+data.daily[4].weather[0].icon+"@2x.png";
+            icon5.src="https://openweathermap.org/img/wn/"+data.daily[4].weather[0].icon+"@2x.png";
             temp5.textContent=data.daily[4].temp.day;
             wind5.textContent=data.daily[4].wind_speed;
             humidity5.textContent=data.daily[4].humidity;
