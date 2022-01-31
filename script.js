@@ -46,7 +46,7 @@ var cityTitle=document.getElementById("cityTitle");
 
 
 function directGeocode(cityName) {
-  var dgApiCall=`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${apiKey}`;
+  var dgApiCall=`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=${apiKey}`;
   console.log(dgApiCall);
         fetch(dgApiCall)
         .then(response => response.json())
